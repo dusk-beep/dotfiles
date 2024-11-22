@@ -1,0 +1,3 @@
+[submodule "noevimConfig"]
+	path = noevimConfig
+	url = git@github.com:dusk-beep/neovimConfig.git
