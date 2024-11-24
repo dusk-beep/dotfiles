@@ -115,15 +115,6 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
 
-# Set personal aliases, overriding those provided by Oh My Zsh libs,
-alias ls='lsd'
-alias v='nvim'
-alias grep='rg'
-alias cpc='termux-clipboard-set'
-alias cat='bat'
-alias c='clear'
-alias find='fd'
-
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
 # users are encouraged to define aliases within a top-level file in
 # the $ZSH_CUSTOM folder, with .zsh extension. Examples:
@@ -132,9 +123,12 @@ alias find='fd'
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 eval "$(zoxide init zsh)"
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+source ~/.zshrc_custom_functions
+source ~/.zshrc_custom_alias
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

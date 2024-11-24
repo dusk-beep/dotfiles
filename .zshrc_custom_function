@@ -1,0 +1,17 @@
+
+#custom fusnction to cd or nvim
+ff() {
+  local selection=$(fd | fzf --height=40% --border)
+  if [ -z "$selection" ]; then
+    echo "No selection made"
+    return
+  fi
+
+  if [ -f "$selection" ]; then
+    nvim "$selection"
+  elif [ -d "$selection" ]; then
+    cd "$selection"
+  else
+    echo "Invalid selection"
+  fi
+}
