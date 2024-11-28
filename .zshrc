@@ -90,11 +90,12 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
           git
-          fzf-tab
+          #fzf-tab
+          rust
           zsh-autosuggestions
           you-should-use
           zsh-syntax-highlighting
-        )
+       )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -124,11 +125,14 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
+#zstyle ':fzf-tab:*' switch-group '<' '>'
+autoload -Uz compinit
+compinit
 eval "$(zoxide init zsh)"
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 source ~/.zshrc_custom_functions
 source ~/.zshrc_custom_alias
+source ~/.zshrc_paths
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -1,11 +1,14 @@
 alias ls='lsd'
 alias v='nvim'
-alias grep='rg'
 alias cpc='termux-clipboard-set'
 alias cat='bat'
 alias c='clear'
-alias find='fd'
 alias zshconfig="nvim ~/.zshrc"
+alias ps='procs'
 
+#rust
+alias cr='cargo run'
+
+alias tree='ls --tree'
 alias gob='git rev-parse --is-inside-work-tree &>/dev/null && url=$(git remote get-url origin 2>/dev/null | sed "s/git@github.com:/https:\/\/github.com\//") && termux-open-url "$url" || echo "Not a Git repository"'
 alias glog="git log --graph --oneline --all --decorate --parents"
