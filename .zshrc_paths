@@ -2,4 +2,4 @@
 export PATH="$PATH:$HOME/.cargo/bin"
 #go binaries
 export PATH="$PATH:$HOME/go/bin"
-export MANPAGER="bat --paging=always"
+# export MANPAGER="bat --paging=always"

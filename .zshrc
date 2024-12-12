@@ -143,8 +143,9 @@ _fzf_compgen_dir() {
 }
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #zstyle ':fzf-tab:*' switch-group '<' '>'
-autoload -Uz compinit
-compinit
+autoload -U compinit; compinit
+source ~/somewhere/fzf-tab.plugin.zsh
+
 eval "$(zoxide init zsh)"
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
