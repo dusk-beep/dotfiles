@@ -6,7 +6,7 @@ trap "exit" HUP
 
 
 if [ -t 1 ] && [ -z "$TMUX" ]; then
-  tmux new-session -A -s TERMUX
+  tmux new-session -A -s DUSK
 fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -90,8 +90,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
           git
-          #fzf-tab
-          rust
           zsh-autosuggestions
           you-should-use
           zsh-syntax-highlighting
@@ -143,6 +141,7 @@ _fzf_compgen_dir() {
 }
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #zstyle ':fzf-tab:*' switch-group '<' '>'
+
 autoload -U compinit; compinit
 source ~/somewhere/fzf-tab.plugin.zsh
 
